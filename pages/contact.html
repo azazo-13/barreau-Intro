@@ -1,0 +1,28 @@
+<div class="card">
+  <h3>Contact</h3>
+  <p class="muted">Besoin d'aide ou question ? Contactez l'équipe du Barreau.</p>
+
+  <form onsubmit="handleContact(event)">
+    <div class="row">
+      <label>Nom</label>
+      <input name="pseudo" required />
+    </div>
+    <div class="row">
+      <label>Message</label>
+      <textarea name="message" rows="4" required></textarea>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button type="submit">Envoyer</button>
+      <div class="small muted">(formulaire envoyé)</div>
+    </div>
+  </form>
+</div>
+
+<script>
+  async function handleContact(e){
+    e.preventDefault();
+    const data = new FormData(e.target);
+    alert('Message envoyé (simulé) : ' + data.get('message'));
+    e.target.reset();
+  }
+</script>

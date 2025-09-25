@@ -1,0 +1,35 @@
+<div class="card">
+  <h3>Recrutement</h3>
+  <p class="muted">Souhaitez-vous rejoindre le Barreau ? Remplissez le formulaire ci‑dessous.</p>
+  <form id="apply-form" onsubmit="handleApply(event)">
+    <div class="row">
+      <label>Nom</label>
+      <input required name="name" placeholder="Ex: Maître Dupont" />
+    </div>
+    <div class="row">
+      <label>Rôle souhaité</label>
+      <select name="role">
+        <option>Avocat</option>
+        <option>Juge</option>
+        <option>Clerc</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>Motivation (courte)</label>
+      <textarea name="motivation" rows="4" placeholder="Pourquoi souhaitez-vous rejoindre le Barreau ?"></textarea>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <button type="submit">Envoyer la candidature</button>
+      <div class="small muted">Les candidatures seront envoyées au bureau compétent.</div>
+    </div>
+  </form>
+</div>
+
+<script>
+  async function handleApply(e){
+    e.preventDefault();
+    const data = new FormData(e.target);
+    alert('Candidature envoyée (simulé) : ' + data.get('name'));
+    e.target.reset();
+  }
+</script>
