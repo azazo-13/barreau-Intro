@@ -6,6 +6,43 @@
   <title>Barreau — Informations officielles</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png">
+  <style>
+    :root{
+  --bg:#1a2738;        /* couleur du fond principal */
+  --card:#1f2a3a;      /* couleur des cartes */
+  --accent:#7dd3fc;    /* couleur des boutons et liens actifs */
+  --muted:#9aa6b2;     /* couleur des textes secondaires */
+  --glass:rgba(255,255,255,0.03); /* fond semi-transparent des cartes */
+}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#1a2738 0%, #1f2a3a 100%);-webkit-font-smoothing:antialiased}
+    header{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(4px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#06202a;font-weight:700}
+    h1{font-size:18px;margin:0}
+    nav{margin-left:auto}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;padding:8px;border-radius:8px}
+    nav a.active,nav a:hover{color:var(--accent);background:var(--glass)}
+    main{padding:28px;max-width:1100px;margin:0 auto}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+    .lead{color:#d7eefc}
+    .muted{color:var(--muted);font-size:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .member{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%,#fff0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg)}
+    button{background:var(--accent);border:none;color:#00121a;padding:10px 12px;border-radius:8px;cursor:pointer}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+    .tabs{display:flex;gap:10px;margin-bottom:12px}
+    .tab{cursor:pointer;padding:8px 10px;border-radius:8px;color:var(--muted)}
+    .tab.active{background:var(--glass);color:var(--accent)}
+    .rule{margin-bottom:12px}
+    .small{font-size:13px;color:var(--muted)}
+    form .row{display:flex;flex-direction:column;margin-bottom:10px}
+    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#eaf6ff}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    @media (max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
+  </style>
 </head>
 <body>
   <header>
@@ -17,7 +54,7 @@
       </div>
     </div>
     <nav>
-      <a href="../index.html" data-target="home" class="active">Accueil</a>
+      <a href="../index.html" data-target="home" ">Accueil</a>
       <a href="regles.html" data-target="regles">Règlement</a>
       <a href="membres.html" data-target="membres">Membres</a>
       <a href="recrutement.html" data-target="recrutement">Recrutement</a>
@@ -161,6 +198,36 @@ function openProfile(name){
 function closeProfile(){
   document.getElementById('profile-modal').style.display='none';
 }
+
+const tabs = document.querySelectorAll('.tab');
+const sections = document.querySelectorAll('#tab-general, #tab-proc, #tab-sanctions');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Déco tous les tabs
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Masque toutes les sections
+    sections.forEach(s => s.style.display = 'none');
+
+    // Affiche la section correspondante
+    const sectionId = tab.dataset.tab;
+    document.getElementById(sectionId).style.display = 'block';
+  });
+});
+
+
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  // Vérifie si l'URL du lien correspond à la page actuelle
+  if(link.href === window.location.href){
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
+});
 
 </script>
 </body>

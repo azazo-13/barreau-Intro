@@ -7,7 +7,7 @@
   <meta name="description" content="Site d'information du Barreau — règlements, membres, procédures et actualités." />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png">
-    <style>
+  <style>
     :root{
   --bg:#1a2738;        /* couleur du fond principal */
   --card:#1f2a3a;      /* couleur des cartes */
@@ -55,7 +55,7 @@
       </div>
     </div>
     <nav>
-      <a href="../index.html" data-target="home" class="active">Accueil</a>
+      <a href="../index.html" data-target="home">Accueil</a>
       <a href="regles.html" data-target="regles">Règlement</a>
       <a href="membres.html" data-target="membres">Membres</a>
       <a href="recrutement.html" data-target="recrutement">Recrutement</a>
@@ -108,6 +108,17 @@
     © Barreau Intro — Informations officielles
   </footer>
   
-<script src="js/main.js"></script>
+<script>
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+  // Vérifie si l'URL du lien correspond à la page actuelle
+  if(link.href === window.location.href){
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
+});
+</script>
 
 </html>
