@@ -45,3 +45,24 @@
   <!-- Favicon (logo dans l'onglet du navigateur) -->
   <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png">
 </head>
+<body>
+  <header>
+    <div class="brand">
+      <!-- Logo Barreau de Californie -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png" 
+           alt="Logo Barreau de Californie" 
+           style="width:60px; height:auto; border-radius:8px;">
+      <div>
+        <h1>Barreau — Informations officielles</h1>
+        <div class="small">Règlements, membres et information </div>
+      </div>
+    </div>
+    <nav>
+      <a href="#home" data-target="home" class="active">Accueil</a>
+      <a href="#regles" data-target="regles">Règlement</a>
+      <a href="#membres" data-target="membres">Membres</a>
+      <a href="#recrutement" data-target="recrutement">Recrutement</a>
+      <a href="#actualites" data-target="actualites">Actualités</a>
+      <a href="#contact" data-target="contact">Contact</a>
+    </nav>
+  </header>
