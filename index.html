@@ -1,159 +1,118 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Cour de Justice de Los Santos</title>
-  <meta name="description" content="Site d'information de Cour de Justice de Los Santos — règlements, membres, procédures et actualités." />
-  <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
-<style>
-:root{
-  /* Palette principale */
-  --bg: #0B3D91;        /* bleu marine fond principal */
-  --card: #F2F2F2;      /* gris clair pour les cartes */
-  --accent: #FFC107;    /* doré pour boutons et liens actifs */
-  --muted: #cbd5e1;     /* texte secondaire sombre */
-  --danger: #C62828;    /* rouge sombre pour alertes */
-  --glass: rgba(255,255,255,0.05); /* fond semi-transparent des cartes */
+  <title>Barreau — Informations officielles</title>
+  <meta name="description" content="Site d'information du Barreau — règlements, membres, procédures et actualités." />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png">
+  <style>
+    :root{
+  --bg:#1a2738;        /* couleur du fond principal */
+  --card:#1f2a3a;      /* couleur des cartes */
+  --accent:#7dd3fc;    /* couleur des boutons et liens actifs */
+  --muted:#9aa6b2;     /* couleur des textes secondaires */
+  --glass:rgba(255,255,255,0.03); /* fond semi-transparent des cartes */
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:'Open Sans',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#e6eef6;background:linear-gradient(180deg,var(--bg) 0%,#1f2a3a 100%);-webkit-font-smoothing:antialiased
-/* centrage parfait */
- display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* au lieu de height:100vh */
-  text-align: center;
-  background: linear-gradient(180deg,var(--bg) 0%,#1f2a3a 100%);
-}
-header{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.05);backdrop-filter:blur(4px)}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#06202a;font-weight:700}
-h1,h2,h3,h4,h5,h6{font-family:'Merriweather',serif;color:#e6eef6;margin:0}
-nav{margin-left:auto}
-nav a{color:var(--muted);text-decoration:none;margin-left:12px;padding:8px;border-radius:8px}
-nav a.active,nav a:hover{color:var(--accent);background:var(--glass)}
-main{padding:28px;max-width:1100px;margin:0 auto}
-.hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);border:1px solid rgba(255,255,255,0.05);padding:18px;border-radius:12px}
-.lead{color:#e6eef6;font-family:'Merriweather',serif;font-style:italic}
-.muted{color:var(--muted);font-size:14px}
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.member{display:flex;gap:12px;align-items:center}
-.avatar{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%,#fff0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg)}
-button{background:var(--accent);border:none;color:#00121a;padding:10px 12px;border-radius:8px;cursor:pointer}
-footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
-.tabs{display:flex;gap:10px;margin-bottom:12px}
-.tab{cursor:pointer;padding:8px 10px;border-radius:8px;color:var(--muted)}
-.tab.active{background:var(--glass);color:var(--accent)}
-.rule{margin-bottom:12px}
-.small{font-size:13px;color:var(--muted)}
-form .row{display:flex;flex-direction:column;margin-bottom:10px}
-input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px;border-radius:8px;color:#e6eef6;font-family:'Open Sans',sans-serif}
-label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans',sans-serif}
-@media (max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
-</style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#1a2738 0%, #1f2a3a 100%);-webkit-font-smoothing:antialiased}
+    header{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(4px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#06202a;font-weight:700}
+    h1{font-size:18px;margin:0}
+    nav{margin-left:auto}
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;padding:8px;border-radius:8px}
+    nav a.active,nav a:hover{color:var(--accent);background:var(--glass)}
+    main{padding:28px;max-width:1100px;margin:0 auto}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+    .lead{color:#d7eefc}
+    .muted{color:var(--muted);font-size:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .member{display:flex;gap:12px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%,#fff0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg)}
+    button{background:var(--accent);border:none;color:#00121a;padding:10px 12px;border-radius:8px;cursor:pointer}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+    .tabs{display:flex;gap:10px;margin-bottom:12px}
+    .tab{cursor:pointer;padding:8px 10px;border-radius:8px;color:var(--muted)}
+    .tab.active{background:var(--glass);color:var(--accent)}
+    .rule{margin-bottom:12px}
+    .small{font-size:13px;color:var(--muted)}
+    form .row{display:flex;flex-direction:column;margin-bottom:10px}
+    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#eaf6ff}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    @media (max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
+  </style>
 </head>
 <body>
   <header>
     <div class="brand">
-      <img src="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png" alt="Logo" style="width:200px;border-radius:200px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png" alt="Logo" style="width:60px;border-radius:8px;">
       <div>
-        <h1>Cour de Justice de Los Santos</h1>
-        <div class="small">Accueil</div>
+        <h1>Barreau — Informations officielles</h1>
+        <div class="small">Règlements, membres et informations</div>
       </div>
     </div>
     <nav>
       <a href="#home" data-target="home">Accueil</a>
-      <a href="pages/presentation.html" data-target="presentation">Présentation</a>
-	  <a href="pages/regles.html" data-target="regles">Règlements</a>
-      <a href="pages/actualites.html" data-target="actualités">Actualités</a>
-      <a href="pages/procedures.html" data-target="procédures">Procédures et services</a>
-      <a href="pages/jugements.html" data-target="jugements">Jugements récents</a>
-	  <a href="pages/membres.html" data-target="membres">Organigramme</a>
-      <a href="pages/contact.html" data-target="contact">Contact / Informations pratiques</a>
+      <a href="pages/regles.html" data-target="regles">Règlement</a>
+      <a href="pages/membres.html" data-target="membres">Membres</a>
+      <a href="pages/recrutement.html" data-target="recrutement">Recrutement</a>
+      <a href="pages/actualites.html" data-target="actualites">Actualités</a>
+      <a href="pages/contact.html" data-target="contact">Contact</a>
     </nav>
   </header>
 <main>
     <section id="home" class="view">
       <div class="hero">
         <div class="card">
-          <h2>Bienvenue à la Cour de Justice de Los Santos</h2>
-          <p class="lead">La Cour de Justice de Los Santos garantit l’équité et l’application des lois. Vous y trouverez les règles, les dossiers publics, les informations sur les procédures judiciaires, ainsi que les contacts pour toute demande officielle ou consultation.</p>
+          <h2>Bienvenue au Barreau</h2>
+          <p class="lead">Le Barreau assure la représentation légale et le suivi des procédures judiciaires. Ici vous trouverez les règles, fiches des professionnels et informations pour contacter ou rejoindre le Barreau.</p>
 
           <div style="margin-top:12px" class="muted">Fonctions rapides :</div>
           <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
-            <button onclick="navigateTo('contact')">Contact</button>
+            <button onclick="navigateTo('recrutement')">Postuler comme avocat</button>
             <button onclick="navigateTo('regles')">Lire le règlement</button>
-            <button onclick="navigateTo(actualités)">Actualités</button>
-			<button onclick="navigateTo(actualités)">Procédures et services</button>
+            <button onclick="copyDiscord()">***</button>
           </div>
 
           <hr style="margin:18px 0;border-color:rgba(255,255,255,0.03)" />
 
-          <h3>Procédures judiciaires</h3>
-		  <ol class="small">
-			<li>Soumettre une plainte auprès du LSCSD ou du DOJ avec tous les documents requis.</li>
-			<li>Être assisté par un avocat ou un représentant légal pour la préparation du dossier.</li>
-			<li>Participation à l’audience publique selon le calendrier officiel de la Cour.</li>
-			<li>Consultation des jugements et décisions rendus par la Cour.</li>
-			<li>Notification officielle des décisions et possibilité de recours si applicable.</li>
-		  </ol>
-
+          <h3>Procédure RP rapide</h3>
+          <ol class="small">
+            <li>1. Déposer une plainte et fournir les documents nécessaires.</li>
+            <li>2. Contacter un avocat ou représentant légal.</li>
+            <li>3. Audience publique selon le calendrier officiel.</li>
+          </ol>
         </div>
 
-		<aside>
-			<div class="card">
-			<h4>Statut</h4>
-			<div class="muted">Recrutement : Ouvert </div>
-			<div class="muted" style="margin-top:4px">Procès en cours : 27 </div>
-			<hr style="margin:10px 0;border-color:rgba(255,255,255,0.05)" />
-			<h4>Infos</h4>
-			<div class="small" style="margin-top:8px">
-				Heures d'audience : voir <a href="pages/actualites.html" style="color:#FFFFFF; font-weight:bold;"><strong>Actualités</strong></a><br/>
-				Contact : voir <a href="pages/contact.html" style="color:#FFFFFF; font-weight:bold;"><strong>Contact</strong></a><br/>
-				Adresse : <em>6025 Picture Perfect Drive, Los Santos</em>
-			 </div>
-			</div>
-		</aside>
+        <aside>
+          <div class="card">
+            <h4>Statut</h4>
+            <div class="muted">Ouvert — 7 membres actifs</div>
+            <hr style="margin:10px 0;border-color:rgba(255,255,255,0.03)" />
+            <h4>Infos</h4>
+            <div class="small" style="margin-top:8px">Heures d'audience : voir <strong>Actualités</strong></div>
+          </div>
+        </aside>
+      </div>
 
-
-      <section style="margin-top:30px">
-		<div class="card">
-		<h3>Derniers procès</h3>
-		<div class="grid-6" style="margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;">
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-			<div class="card small" style="padding:20px; min-height:100px;">
-			<strong>Procès #xxx</strong>
-			<div class="muted">Délit — Verdict : xxx</div>
-		</div>
-    </div>
-  </div>
-</section>
-
+      <section style="margin-top:20px">
+        <div class="card">
+          <h3>Derniers procès</h3>
+          <div class="grid-3" style="margin-top:10px">
+            <div class="card small"><strong>Procès #472</strong><div class="muted">Vol qualifié — Verdict : En cours</div></div>
+            <div class="card small"><strong>Procès #468</strong><div class="muted">Fraude RP — Verdict : Peine légère</div></div>
+            <div class="card small"><strong>Procès #465</strong><div class="muted">Risse publique — Verdict : Amende</div></div>
+          </div>
+        </div>
+      </section>
+    </section>
 	 </main>
-	<footer>
-    © Cour de Justice de Los Santos 
-	</footer>
+  <footer>
+    © Barreau Intro — Informations officielles
+  </footer>
   
 <script>
 const navLinks = document.querySelectorAll('nav a');
