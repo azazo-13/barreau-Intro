@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cour de Justice de Los Santos</title>
-  <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
+  <title>Page en travaux - Cour de Justice de Los Santos</title>
+   <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
   <style>
+
 :root{
   /* Palette principale */
   --bg: #0B3D91;        /* bleu marine fond principal */
@@ -59,7 +60,7 @@ label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans
       <img src="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png" alt="Logo" style="width:200px;border-radius:200px;">
       <div>
         <h1>Cour de Justice de Los Santos</h1>
-        <div class="small">Contact</div>
+        <div class="small">Jugements récents</div>
       </div>
     </div>
     <nav>
@@ -73,124 +74,15 @@ label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans
       <a href="contact.html" data-target="contact">Contact / Informations pratiques</a>
     </nav>
   </header>
-<div class="card contact-card">
-  <h3>Contact</h3>
-  <p class="muted">Besoin d'aide ou question ? Contactez l'équipe de la Cour de Justice.</p>
-
-  <hr class="divider" />
-
-  <form onsubmit="handleContact(event)">
-    <div class="row">
-      <label>Nom</label>
-      <input name="pseudo" required />
-    </div>
-    <div class="row">
-      <label>Message</label>
-      <textarea name="message" rows="4" required></textarea>
-    </div>
-    <div class="form-actions">
-      <button type="submit">Envoyer</button>
-    </div>
-  </form>
-</div>
-
-<style>
-/* Contact Card compacte et centrée */
-.contact-card {
-  max-width: 450px; /* plus large */
-  margin: 30px auto;
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* léger effet flottant */
-}
-
-/* Divider */
-.contact-card .divider {
-  margin: 14px 0;
-  border-color: rgba(255,255,255,0.05);
-}
-
-/* Labels */
-.contact-card label {
-  display: block;
-  text-align: left;
-  font-size: 13px;
-  margin-bottom: 6px;
-  color: #FFD966; /* doré clair pour le label */
-  font-weight: 600;
-}
-
-/* Inputs & Textarea */
-.contact-card input,
-.contact-card textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05); /* léger fond clair pour visibilité */
-  color: #e6eef6;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.contact-card input::placeholder,
-.contact-card textarea::placeholder {
-  color: rgba(230,238,246,0.6); /* placeholder plus clair */
-}
-
-/* Focus sur champs */
-.contact-card input:focus,
-.contact-card textarea:focus {
-  border-color: var(--accent); /* doré foncé au focus */
-  background: rgba(255,193,7,0.05);
-  outline: none;
-}
-
-/* Bouton */
-.contact-card button {
-  background: var(--accent); /* doré foncé */
-  color: #00121a;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.contact-card button:hover {
-  background: #a77906; /* doré encore plus foncé au survol */
-}
-
-/* Form actions (centrage bouton) */
-.contact-card .form-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-  gap: 10px;
-}
-
-/* Textes plus petits */
-.contact-card h3 {
-  font-size: 1.5em;
-  margin-bottom: 8px;
-  color: var(--accent);
-}
-
-.contact-card p.muted {
-  font-size: 0.9em;
-  margin-bottom: 14px;
-  color: #cbd5e1;
-}
-</style>
-
-
-	  
+  </body>
+<body>
+  <div class="card">
+    <img class="construction-img" src="https://www.ville-hem.fr/wp-content/uploads/2020/09/Page-en-construction.jpg" alt="Page en construction">
+    <h1>Page en travaux</h1>
+    <p>Cette section du site de la <strong>Cour de Justice de Los Santos</strong> est actuellement en maintenance.</p>
+    <p class="muted">Merci de revenir ultérieurement. Pour toute demande urgente, veuillez contacter le greffe.</p>
+  </div>
+</body>  
 	<footer>
     © Cour de Justice de Los Santos 
 	</footer>
@@ -212,5 +104,4 @@ navLinks.forEach(link => {
   }
 });
 </script>
-
 </html>

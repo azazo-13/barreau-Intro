@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cour de Justice de Los Santos</title>
-    <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
+  <title>Page en travaux - Cour de Justice de Los Santos</title>
+  <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
   <style>
 :root{
   /* Palette principale */
@@ -59,7 +59,7 @@ label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans
       <img src="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png" alt="Logo" style="width:200px;border-radius:200px;">
       <div>
         <h1>Cour de Justice de Los Santos</h1>
-        <div class="small">Actualités</div>
+        <div class="small">Présentation</div>
       </div>
     </div>
     <nav>
@@ -74,37 +74,17 @@ label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans
     </nav>
   </header>
   </body>
-<div class="card">
-    <h3>Actualités & Calendrier</h3> 
-    <div class="small muted">Retrouvez ici les prochaines audiences et annonces importantes.</div> 
-<!-- 
-✅ Explications
-
-Chaque iFrame pointe vers l’onglet spécifique du Google Sheet (gid=...).
-
-single=true et widget=true permettent d’afficher uniquement la table, sans menus Google.
-
-headers=false supprime l’affichage des en-têtes de Google Sheet si tu veux uniquement les cellules.
-
-width:100% et height:400px peuvent être ajustés selon ton design. 
-    -->
-    <h4 style="margin-top:12px;">Salle Basse</h4>
-    <iframe 
-      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTdZLIwhq7CRIamMb3GEUIMEw3e44qj_QBWUKhMRtK3aqiwuDA8vi_CU5JTu3whAWLPTTQ8PKBH4R6T/pubhtml?gid=1855178804&single=true&widget=true&headers=false" 
-      style="border:0;width:128vw;height:800px;">
-    </iframe>
-
-    <h4 style="margin-top:12px;">Salle Haute</h4>
-    <iframe 
-      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTdZLIwhq7CRIamMb3GEUIMEw3e44qj_QBWUKhMRtK3aqiwuDA8vi_CU5JTu3whAWLPTTQ8PKBH4R6T/pubhtml?gid=1656043113&single=true&widget=true&headers=false" 
-      style="border:0;width:125vw;height:800px;">
-    </iframe>
-
+<body>
+  <div class="card">
+    <img class="construction-img" src="https://www.ville-hem.fr/wp-content/uploads/2020/09/Page-en-construction.jpg" alt="Page en construction">
+    <h1>Page en travaux</h1>
+    <p>Cette section du site de la <strong>Cour de Justice de Los Santos</strong> est actuellement en maintenance.</p>
+    <p class="muted">Merci de revenir ultérieurement. Pour toute demande urgente, veuillez contacter le greffe.</p>
   </div>
-  
-	<footer>
+</body>
+	   <footer>
     © Cour de Justice de Los Santos 
-	</footer>
+  </footer>
   
 <script>
 const navLinks = document.querySelectorAll('nav a');
@@ -123,5 +103,4 @@ navLinks.forEach(link => {
   }
 });
 </script>
-
 </html>

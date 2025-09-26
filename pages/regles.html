@@ -1,67 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Barreau — Informations officielles</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cour de Justice de Los Santos</title>
+  <link rel="icon" href="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png">
   <style>
-    :root{
-  --bg:#1a2738;        /* couleur du fond principal */
-  --card:#1f2a3a;      /* couleur des cartes */
-  --accent:#7dd3fc;    /* couleur des boutons et liens actifs */
-  --muted:#9aa6b2;     /* couleur des textes secondaires */
-  --glass:rgba(255,255,255,0.03); /* fond semi-transparent des cartes */
+:root{
+  /* Palette principale */
+  --bg: #0B3D91;        /* bleu marine fond principal */
+  --card: #F2F2F2;      /* gris clair pour les cartes */
+  --accent: #FFC107;    /* doré pour boutons et liens actifs */
+  --muted: #cbd5e1;     /* texte secondaire sombre */
+  --danger: #C62828;    /* rouge sombre pour alertes */
+  --glass: rgba(255,255,255,0.05); /* fond semi-transparent des cartes */
 }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#1a2738 0%, #1f2a3a 100%);-webkit-font-smoothing:antialiased}
-    header{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(4px)}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#06202a;font-weight:700}
-    h1{font-size:18px;margin:0}
-    nav{margin-left:auto}
-    nav a{color:var(--muted);text-decoration:none;margin-left:12px;padding:8px;border-radius:8px}
-    nav a.active,nav a:hover{color:var(--accent);background:var(--glass)}
-    main{padding:28px;max-width:1100px;margin:0 auto}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px}
-    .lead{color:#d7eefc}
-    .muted{color:var(--muted);font-size:14px}
-    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .member{display:flex;gap:12px;align-items:center}
-    .avatar{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%,#fff0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg)}
-    button{background:var(--accent);border:none;color:#00121a;padding:10px 12px;border-radius:8px;cursor:pointer}
-    footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
-    .tabs{display:flex;gap:10px;margin-bottom:12px}
-    .tab{cursor:pointer;padding:8px 10px;border-radius:8px;color:var(--muted)}
-    .tab.active{background:var(--glass);color:var(--accent)}
-    .rule{margin-bottom:12px}
-    .small{font-size:13px;color:var(--muted)}
-    form .row{display:flex;flex-direction:column;margin-bottom:10px}
-    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:8px;color:#eaf6ff}
-    label{font-size:13px;color:var(--muted);margin-bottom:6px}
-    @media (max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Open Sans',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#e6eef6;background:linear-gradient(180deg,var(--bg) 0%,#1f2a3a 100%);-webkit-font-smoothing:antialiased 
+/* centrage parfait */
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* au lieu de height:100vh */
+  text-align: center;
+  background: linear-gradient(180deg,var(--bg) 0%,#1f2a3a 100%);
+}
+header{display:flex;align-items:center;gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.05);backdrop-filter:blur(4px)}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#06202a;font-weight:700}
+h1,h2,h3,h4,h5,h6{font-family:'Merriweather',serif;color:#e6eef6;margin:0}
+nav{margin-left:auto}
+nav a{color:var(--muted);text-decoration:none;margin-left:12px;padding:8px;border-radius:8px}
+nav a.active,nav a:hover{color:var(--accent);background:var(--glass)}
+main{padding:28px;max-width:1100px;margin:0 auto}
+.hero{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);border:1px solid rgba(255,255,255,0.05);padding:18px;border-radius:12px}
+.lead{color:#e6eef6;font-family:'Merriweather',serif;font-style:italic}
+.muted{color:var(--muted);font-size:14px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.member{display:flex;gap:12px;align-items:center}
+.avatar{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,#fff2 0%,#fff0);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg)}
+button{background:var(--accent);border:none;color:#00121a;padding:10px 12px;border-radius:8px;cursor:pointer}
+footer{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+.tabs{display:flex;gap:10px;margin-bottom:12px}
+.tab{cursor:pointer;padding:8px 10px;border-radius:8px;color:var(--muted)}
+.tab.active{background:var(--glass);color:var(--accent)}
+.rule{margin-bottom:12px}
+.small{font-size:13px;color:var(--muted)}
+form .row{display:flex;flex-direction:column;margin-bottom:10px}
+input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px;border-radius:8px;color:#e6eef6;font-family:'Open Sans',sans-serif}
+label{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'Open Sans',sans-serif}
+@media (max-width:820px){.hero{grid-template-columns:1fr}nav{display:none}}
   </style>
 </head>
 <body>
   <header>
     <div class="brand">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/CalBarSeal.svg/1200px-CalBarSeal.svg.png" alt="Logo" style="width:60px;border-radius:8px;">
+      <img src="https://i.servimg.com/u/f11/19/17/76/36/fwmnt112.png" alt="Logo" style="width:200px;border-radius:200px;">
       <div>
-        <h1>Barreau — Informations officielles</h1>
-        <div class="small">Règlements, membres et informations</div>
+        <h1>Cour de Justice de Los Santos</h1>
+        <div class="small">Règlements</div>
       </div>
     </div>
     <nav>
       <a href="../index.html" data-target="home">Accueil</a>
-      <a href="regles.html" data-target="regles">Règlement</a>
-      <a href="membres.html" data-target="membres">Membres</a>
-      <a href="recrutement.html" data-target="recrutement">Recrutement</a>
-      <a href="actualites.html" data-target="actualites">Actualités</a>
-      <a href="contact.html" data-target="contact">Contact</a>
+      <a href="presentation.html" data-target="presentation">Présentation</a>
+	  <a href="regles.html" data-target="regles">Règlements</a>
+      <a href="actualites.html" data-target="actualités">Actualités</a>
+      <a href="procedures.html" data-target="procédures">Procédures et services</a>
+      <a href="jugements.html" data-target="jugements">Jugements récents</a>
+	  <a href="membres.html" data-target="membres">Organigramme</a>
+      <a href="contact.html" data-target="contact">Contact / Informations pratiques</a>
     </nav>
   </header>
+  </body>
   
 <div class="card">
   <!-- Boutons des tabs -->
@@ -71,197 +83,219 @@
     <div class="tab" data-tab="tab-sanctions">Sanctions</div>
   </div>
 <style>
-  /* Style général du règlement */
-  #tab-general {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
+/* Section règlement */
+#tab-general {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #e6eef6;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 950px;
+}
 
-  /* Style des titres des chapitres */
-  #tab-general h4 {
-    color: #2C5CF2; /* bleu foncé */
-    font-size: 1.5em;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #1e3a8a;
-    padding-bottom: 5px;
-  }
+/* Titres des chapitres */
+#tab-general h4 {
+  color: var(--accent);
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--bg);
+  padding-bottom: 5px;
+  font-family: 'Merriweather', serif;
+}
 
-  /* Style des articles */
-  #tab-general .rule {
-    background-color: #243A54;
-    border-left: 4px solid #597DF0;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-  }
+/* Bloc règles */
+#tab-general .rule {
+  background: var(--glass);
+  border-left: 4px solid var(--accent);
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  color: #e6eef6;
+}
 
-  #tab-general .rule strong {
-    color: #849FF5;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.1em;
-  }
+/* Titre de règle */
+#tab-general .rule strong {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.1em;
+  font-weight: 700;
+}
 
-  /* Style des listes à l'intérieur des articles */
-  #tab-general .rule ul {
-    margin-top: 5px;
-    margin-left: 20px;
-  }
+/* Listes */
+#tab-general .rule ul {
+  margin: 6px 0 0 20px;
+}
 
-  #tab-general .muted {
-    color: F9F9F9; /* blanc */
-    margin-bottom: 20px;
-  }
+/* Texte secondaire */
+#tab-general .muted {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 0.95em;
+  font-style: italic;
+}
+
+/* Panneau d’interdiction */
+#tab-general .warnings {
+  background: var(--glass);
+  border: 2px solid var(--danger);
+  border-radius: 12px;
+  padding: 18px;
+  margin: 28px 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Accent doré dans panneau */
+#tab-general .warnings span {
+  display: block;
+  margin: 6px 0;
+  color: var(--accent);
+}
+
+/* Règles critiques (infractions / sanctions) */
+#tab-general .rule.critical {
+  background: var(--danger);
+  color: #fff;
+  border-left: 6px solid var(--accent);
+}
+
+/* Règles importantes (procédures) */
+#tab-general .rule.highlight {
+  background: var(--bg);
+  color: #fff;
+  border-left: 6px solid var(--accent);
+}
 </style>
+
+</style>
+
+
+
   <!-- Sections -->
   <div id="tab-general">
-<h3>Règlement du Barreau</h3>
-  <p class="muted">Ces règles s'appliquent aux membres du Barreau.</p>
+    <h3>Règlement de la Cour de Justice</h3>
+    <p class="muted">
+      Les activités de la Cour supérieure sont sérieuses, et les conséquences des décisions prises en salle d’audience peuvent avoir un impact profond sur l’avenir d’une personne. 
+      La Cour s’attend à ce que toutes les personnes soient traitées avec respect et dignité. 
+      Les visiteurs du tribunal doivent adopter un comportement et une tenue vestimentaire appropriés.
+    </p>
 
-  <!-- Chapitre I : Le bâtonnier -->
-  <h4>Chapitre I : Le bâtonnier</h4>
+    <div class="warnings">
+      🚭 INTERDICTION DE FUMER <br>
+      🎩 INTERDICTION DE PORTER UN COUVRE-CHEF <br>
+      🍔 INTERDICTION DE MANGER OU DE BOIRE <br>
+      🐕 INTERDIT AUX ANIMAUX <br>
+      📷 INTERDICTION DE FILMER ET DE PHOTOGRAPHIER <br>
+      🔇 RESPECTEZ LE SILENCE
+    </div>
 
-  <div class="rule">
-    <strong>Article 8-1 : Élection et rôle du bâtonnier</strong>
-    <p>Le bâtonnier de l’État de San Andreas est élu par ses pairs tous les derniers dimanches de chaque deux mois lors de la réunion du barreau, sous la surveillance du Procureur général. En cas d’absence de bâtonnier, le Gouverneur peut ordonner une élection. Il représente le barreau et la profession d’avocat lors des échanges publics et privés.</p>
+    <!-- Chapitre I : Comportement dans le tribunal -->
+    <h4>Chapitre I : Comportement attendu dans le tribunal</h4>
+
+    <div class="rule">
+      <strong>Article 1 : Circulation dans les couloirs</strong>
+      <p>Si vous êtes en groupe, marchez en paires sur le côté droit des couloirs afin de laisser de la place aux autres usagers.</p>
+    </div>
+
+    <div class="rule">
+      <strong>Article 2 : Silence et respect</strong>
+      <p>Marchez silencieusement et parlez doucement. Les discussions bruyantes perturbent les procès en cours.</p>
+    </div>
+
+    <div class="rule">
+      <strong>Article 3 : Respect des lieux</strong>
+      <p>Respectez les propriétés et le mobilier du tribunal. Utilisez les containers pour vos déchets.</p>
+    </div>
+
+    <div class="rule">
+      <strong>Article 4 : Entrée dans les salles d’audience</strong>
+      <p>Asseyez-vous à la première place disponible. Abstenez-vous de parler pendant que la Cour est en session. Ne quittez pas la salle durant les témoignages ou la prise de parole du juge.</p>
+    </div>
+
+    <!-- Chapitre II : Comportement dans la salle d’audience -->
+    <h4>Chapitre II : Comportement attendu dans la salle d’audience</h4>
+
+    <div class="rule">
+      <strong>Article 5 : Respect de la procédure</strong>
+      <p>La salle d’audience est un lieu de discipline. Soyez toujours respectueux envers le juge, le personnel judiciaire, les avocats et toutes les parties présentes.</p>
+    </div>
+
+    <div class="rule">
+      <strong>Article 6 : Après la décision</strong>
+      <p>Une fois que le tribunal a rendu sa décision, gardez votre calme et quittez la salle avec respect.</p>
+    </div>
+
+    <div class="rule">
+      <strong>Article 7 : Outrage à la Cour</strong>
+      <p>Toute tentative de perturber le tribunal après la décision du juge pourra entraîner des sanctions pour outrage à la Cour, y compris emprisonnement et/ou amende.</p>
+    </div>
+
+    <!-- Chapitre III : Comparution devant le tribunal -->
+    <h4>Chapitre III : Lors de votre comparution</h4>
+
+    <div class="rule">
+      <strong>Article 8 : Règles à suivre</strong>
+      <ul>
+        <li>Soyez à l'heure</li>
+        <li>Jetez chewing-gum, aliments et boissons avant d’entrer</li>
+        <li>Levez-vous lorsque le juge entre ou sort</li>
+        <li>Levez-vous lorsque vous parlez au juge</li>
+        <li>Parlez clairement et adressez-vous au juge en disant « Votre Honneur »</li>
+        <li>N’interrompez jamais le juge. Attendez la fin pour poser vos questions.</li>
+        <li>Entrez et sortez discrètement de la salle</li>
+        <li>Approchez le banc uniquement sur demande</li>
+      </ul>
+    </div>
+
+    <!-- Chapitre IV : Tenue vestimentaire -->
+    <h4>Chapitre IV : Ce qu’il faut porter</h4>
+
+    <div class="rule">
+      <strong>Article 9 : Tenue correcte exigée</strong>
+      <p>Vous devez vous habiller de manière soignée et respectueuse. Les vêtements inappropriés incluent :</p>
+      <ul>
+        <li>Chapeaux (sauf religieux)</li>
+        <li>Lunettes de soleil</li>
+        <li>T-shirts violents, sexuels, insultants ou liés à la drogue</li>
+        <li>Tops tube, dos nu, décolletés, crop tops</li>
+        <li>Jeans déchirés, jupes courtes, shorts, pantalons baggy</li>
+        <li>Débardeurs, gants, claquettes, tongs</li>
+      </ul>
+      <p>Les avocats doivent porter une tenue formelle : costume/cravate pour les hommes, tailleur pour les femmes.</p>
+      <p>Si vous n’êtes pas habillé correctement, il est possible que l’on vous demande de revenir ultérieurement, ce qui retardera votre audience.</p>
+    </div>
+
+    <!-- Chapitre V : Objets interdits -->
+    <h4>Chapitre V : Objets interdits</h4>
+
+    <div class="rule">
+      <strong>Article 10 : Objets dangereux</strong>
+      <p>Tout objet susceptible de causer des blessures est interdit, y compris :</p>
+      <ul>
+        <li>Armes à feu, tasers, couteaux à lame > 5 cm</li>
+        <li>Gaz lacrymogènes, explosifs</li>
+      </ul>
+    </div>
+
+    <div class="rule">
+      <strong>Article 11 : Liste complémentaire</strong>
+      <ul>
+        <li>Outils volumineux (> 15 cm)</li>
+        <li>Piques à glace, fléchettes, coupe-papiers</li>
+        <li>Chaînes métalliques > 60 cm</li>
+        <li>Stylos laser (hors usage avocat)</li>
+        <li>Skateboards, rollers</li>
+        <li>Seringues sans ordonnance</li>
+        <li>Clés de menottes (hors forces de l’ordre)</li>
+        <li>Liquides inflammables</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="rule">
-    <strong>Article 8-2 : Registre des membres</strong>
-    <p>Le bâtonnier tient un registre des membres du barreau à jour et le communique au Bureau du Procureur général pour diffusion.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-3 : Absence aux réunions</strong>
-    <p>L’absence non justifiée d’un avocat entraîne l’invalidation de son vote. En cas d’absence justifiée, le vote peut être transmis par courriel au Procureur général.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-4 : Tarification des prestations</strong>
-    <p>Le bâtonnier peut établir un tarif minimum obligatoire pour l’ensemble des prestations des avocats, respecté par tous les membres.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-5 : Cotisations</strong>
-    <p>Le bâtonnier peut fixer et modifier le montant des cotisations hebdomadaires, communiqué officiellement et ratifié par lui.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-6 : Défaut de paiement</strong>
-    <p>Tout avocat ne s’acquittant pas de ses cotisations peut être soumis à des mesures de recouvrement et à son limogeage par le bâtonnier.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-7 : Cotisation du bâtonnier</strong>
-    <p>Le bâtonnier, dans sa fonction d’avocat, est également tenu de payer sa cotisation.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-8 : Utilisation des cotisations</strong>
-    <ul>
-      <li>Rémunération du bâtonnier</li>
-      <li>Financement des locaux du barreau</li>
-      <li>Financement du personnel du barreau</li>
-      <li>Financement de la communication publique du barreau</li>
-    </ul>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-9 : Conflits d’intérêts</strong>
-    <p>Le bâtonnier ne peut s’entourer de collaborateurs avec lesquels il exerce et ne peut utiliser les biens du barreau à des fins personnelles ou professionnelles.</p>
-  </div>
-
-  <!-- Chapitre II : Nomination et assermentation des avocats -->
-  <h4>Chapitre II : Nomination et assermentation des avocats</h4>
-
-  <div class="rule">
-    <strong>Article 8-10 : Assermentation</strong>
-    <p>Le bâtonnier est chargé de nommer les avocats et de leur faire prêter serment : "Je jure, comme avocat, d’exercer mes fonctions avec dignité, conscience, indépendance, probité et humanité."</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-11 : Certificat d’assermentation</strong>
-    <p>Le bâtonnier délivre le certificat d’assermentation permettant l’exercice sur l’État de San Andreas.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-12 : Archivage des affaires</strong>
-    <p>Le bâtonnier archive toutes les affaires pénales et civiles des avocats. Ces archives peuvent être consultées par tous les avocats de la défense et du Département de la Justice.</p>
-  </div>
-
-  <!-- Chapitre III : Discipline et radiation -->
-  <h4>Chapitre III : Discipline et radiation</h4>
-
-  <div class="rule">
-    <strong>Article 8-13 : Pouvoirs disciplinaires</strong>
-    <ul>
-      <li>Limogé de son poste de bâtonnier</li>
-      <li>Limogé du barreau</li>
-      <li>Radié du barreau</li>
-    </ul>
-    <p>Cette décision se prend par vote conjoint du quorum du barreau, du Procureur général et du Président de la Cour de San Andreas.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-14 : Radiation des avocats</strong>
-    <p>La radiation est irréversible et interdit à l’individu de se présenter au barreau ou d’exercer comme avocat.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-15 : Procédure de radiation</strong>
-    <p>La radiation peut être initiée par le bâtonnier ou le Procureur général avec audition de l’avocat concerné et vote conjoint avec un juge.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-16 : Suspension temporaire</strong>
-    <p>Pendant la procédure de radiation, l’avocat ne peut exercer ses fonctions jusqu’au vote.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-17 : Casier judiciaire</strong>
-    <p>Un avocat ne peut posséder de casier judiciaire pour délit majeur ou crime. La Cour de San Andreas décide du limogeage.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-18 : Limogeage</strong>
-    <p>Le bâtonnier peut limoger un avocat pour motif justifié. L’avocat peut faire appel auprès de la Cour de San Andreas.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-19 : Candidature post-limogeage</strong>
-    <p>Après limogeage, un avocat ne peut se représenter au barreau avant 30 jours calendaires.</p>
-  </div>
-
-  <!-- Chapitre IV : Protection et indépendance -->
-  <h4>Chapitre IV : Protection et indépendance</h4>
-
-  <div class="rule">
-    <strong>Article 8-20 : Protection des locaux professionnels</strong>
-    <p>Seul un membre de la Cour peut ratifier un mandat de perquisition des locaux d’un avocat.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-21 : Déclaration des locaux</strong>
-    <p>Les locaux professionnels doivent être déclarés auprès du Bureau du Procureur et mis à jour régulièrement.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-22 : Indépendance des membres</strong>
-    <p>Le bâtonnier et le Bureau du Procureur garantissent l’indépendance des avocats et la liberté de plaider conformément aux principes fondamentaux du système judiciaire.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-23 : Conflits d’intérêts</strong>
-    <p>Le bâtonnier et le Bureau peuvent convoquer et auditionner les avocats pour résoudre tout conflit d’intérêt, professionnel ou extra-professionnel.</p>
-  </div>
-
-  <div class="rule">
-    <strong>Article 8-24 : Tarification minimale</strong>
-    <p>Le bâtonnier établit un tarif minimum obligatoire pour l’ensemble des prestations des avocats, respecté par tous les membres du barreau.</p>
-  </div>
-  </div>
-
   <div id="tab-proc" style="display:none">
 		  <h3>Procédures</h3>
           <div class="rule"><strong>Dépôt de plainte :</strong> Remplir le formulaire et envoyer les documents au bureau compétent.</div>
@@ -275,9 +309,9 @@
           <div class="rule"><strong>Exclusion définitive :</strong> En cas d'abus répété ou violation grave.</div>
   </div>
 </div>
- <footer>
-    © Barreau Intro — Informations officielles
-  </footer>
+	<footer>
+    © Cour de Justice de Los Santos 
+	</footer>
 <script>
 const tabs = document.querySelectorAll('.tab');
 const sections = document.querySelectorAll('#tab-general, #tab-proc, #tab-sanctions');
@@ -298,13 +332,19 @@ tabs.forEach(tab => {
 });
 
 
+
 const navLinks = document.querySelectorAll('nav a');
 
 navLinks.forEach(link => {
-  // Vérifie si l'URL du lien correspond à la page actuelle
-  if(link.href === window.location.href){
+  // Si le lien contient un hash
+  if(link.hash && window.location.hash === link.hash){
     link.classList.add('active');
-  } else {
+  }
+  // Sinon, si c'est un lien vers une autre page
+  else if(link.pathname === window.location.pathname){
+    link.classList.add('active');
+  }
+  else{
     link.classList.remove('active');
   }
 });
